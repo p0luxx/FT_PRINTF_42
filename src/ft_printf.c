@@ -6,7 +6,7 @@
 /*   By: gorkgall <gorkgall@42barcelona.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/22 10:49:06 by gorkgall          #+#    #+#             */
-/*   Updated: 2026/04/22 13:27:03 by gorkgall         ###   ########.fr       */
+/*   Updated: 2026/04/22 17:41:23 by gorkgall         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,8 @@ size_t	ft_format(char type, va_list arg)
 		count += ft_putnbr_fd(va_arg(arg, int), 1);
 	else if (type == 'c')
 		count += ft_putchar_fd((char)va_arg(arg, int), 1);
+	else if (type == 'p')
+		count += ft_put_pointer(va_arg(arg, void *));
 	else if (type == 's')
 		count += ft_putstr_fd(va_arg(arg, char *), 1);
 	else if (type == 'u')

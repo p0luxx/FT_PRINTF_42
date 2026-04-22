@@ -6,7 +6,7 @@
 /*   By: gorkgall <gorkgall@42barcelona.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/22 11:15:43 by gorkgall          #+#    #+#             */
-/*   Updated: 2026/04/22 13:27:22 by gorkgall         ###   ########.fr       */
+/*   Updated: 2026/04/22 17:39:20 by gorkgall         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 # include <stdarg.h>
 # include <unistd.h>
+# include <stdint.h>
 
 int		ft_printf(char const *s, ...);
 size_t	ft_put_unsigned_fd(unsigned int n, int fd);
@@ -23,5 +24,6 @@ size_t	ft_putchar_fd(char c, int fd);
 size_t	ft_putnbr_fd(int n, int fd);
 size_t	ft_putstr_fd(char *s, int fd);
 size_t	ft_strlen(const char *s);
+size_t	ft_put_pointer(void *p);
 
 #endif
