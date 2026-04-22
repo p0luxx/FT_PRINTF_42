@@ -6,7 +6,7 @@
 /*   By: gorkgall <gorkgall@42barcelona.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/22 10:49:06 by gorkgall          #+#    #+#             */
-/*   Updated: 2026/04/22 17:41:23 by gorkgall         ###   ########.fr       */
+/*   Updated: 2026/04/22 17:48:17 by gorkgall         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ size_t	ft_format(char type, va_list arg)
 	size_t	count;
 
 	count = 0;
-	if (type == 'd')
+	if (type == 'd' || type == 'i')
 		count += ft_putnbr_fd(va_arg(arg, int), 1);
 	else if (type == 'c')
 		count += ft_putchar_fd((char)va_arg(arg, int), 1);
