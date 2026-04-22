@@ -16,7 +16,8 @@ SRC		= src/ft_printf.c \
 		  utils/ft_putchar_fd.c \
 		  utils/ft_putstr_fd.c \
 		  utils/ft_putnbr_fd.c \
-		  utils/ft_strlen.c
+		  utils/ft_strlen.c \
+		  utils/ft_put_pointer.c
 
 OBJ		= $(SRC:.c=.o)
 
