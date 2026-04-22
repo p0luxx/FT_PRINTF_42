@@ -30,7 +30,7 @@ size_t	ft_putnbr_fd(int n, int fd)
 		kk += ft_putnbr_fd(nbr / 10, fd);
 	res = (nbr % 10) + '0';
 	write (fd, &res, 1);
-	return(kk);
+	return (kk);
 }
 
 /*

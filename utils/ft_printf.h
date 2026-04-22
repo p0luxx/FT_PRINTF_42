@@ -6,15 +6,15 @@
 /*   By: gorkgall <gorkgall@42barcelona.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/22 11:15:43 by gorkgall          #+#    #+#             */
-/*   Updated: 2026/04/22 13:24:18 by gorkgall         ###   ########.fr       */
+/*   Updated: 2026/04/22 13:27:22 by gorkgall         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FT_PRINTF_H
 # define FT_PRINTF_H
 
-#include <stdarg.h>
-#include <unistd.h>
+# include <stdarg.h>
+# include <unistd.h>
 
 int		ft_printf(char const *s, ...);
 size_t	ft_put_unsigned_fd(unsigned int n, int fd);
@@ -24,4 +24,4 @@ size_t	ft_putnbr_fd(int n, int fd);
 size_t	ft_putstr_fd(char *s, int fd);
 size_t	ft_strlen(const char *s);
 
-# endif
+#endif
