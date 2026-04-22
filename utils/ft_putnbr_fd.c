@@ -29,7 +29,7 @@ size_t	ft_putnbr_fd(int n, int fd)
 	if (nbr > 9)
 		kk += ft_putnbr_fd(nbr / 10, fd);
 	res = (nbr % 10) + '0';
-	write (fd, &res, 1);
+	kk += write (fd, &res, 1);
 	return (kk);
 }
 
