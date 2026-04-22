@@ -6,7 +6,7 @@
 /*   By: gorkgall <gorkgall@42barcelona.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/22 17:12:17 by gorkgall          #+#    #+#             */
-/*   Updated: 2026/04/22 17:51:22 by gorkgall         ###   ########.fr       */
+/*   Updated: 2026/04/22 18:10:03 by gorkgall         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,11 +23,6 @@ static size_t	ft_put_hex_ptr(uintptr_t n, char *base)
 	return (res);
 }
 
-static char	*ft_error_pointer(void)
-{
-	return ("nil");
-}
-
 size_t	ft_put_pointer(void *p)
 {
 	uintptr_t	ptr;
@@ -35,8 +30,8 @@ size_t	ft_put_pointer(void *p)
 
 	if (!p)
 	{
-		ft_error_pointer();
-		return (0);
+		res += ft_putstr_fd("nil", 1);
+		return (res);
 	}
 	ptr = (uintptr_t)p;
 	res = 0;

@@ -12,10 +12,6 @@
 
 #include "../utils/ft_printf.h"
 
-static	char	*ft_return_null(void)
-{
-	return ("null");
-}
 size_t	ft_putstr_fd(char *s, int fd)
 {
 	size_t	res;
@@ -23,8 +19,8 @@ size_t	ft_putstr_fd(char *s, int fd)
 	res = 0;
 	if (!s)
 	{
-		ft_return_null();
-		return (0);
+		res += write (fd, "null", 4);
+		return (res);
 	}
 	res += write (fd, s, ft_strlen(s));
 	return (res);
