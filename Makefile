@@ -12,32 +12,28 @@ RM		= rm -f
 # ── Fuentes ───────────────────────────────────
 SRC		= src/ft_printf.c \
 		  utils/ft_put_hex.c \
-		  utils/ft_put_unisgned_fd.c
+		  utils/ft_put_unisgned_fd.c \
+		  utils/ft_putchar_fd.c \
+		  utils/ft_putstr_fd.c \
+		  utils/ft_putnbr_fd.c \
+		  utils/ft_strlen.c
 
 OBJ		= $(SRC:.c=.o)
-
-LIBFT		= libft/libft.a
 
 # ── Reglas principales ────────────────────────
 all: $(NAME)
 
-$(NAME): $(LIBFT) $(OBJ)
-	cp $(LIBFT) $(NAME)
+$(NAME): $(OBJ)
 	$(AR) $(NAME) $(OBJ)
 
-$(LIBFT):
-	$(MAKE) -C libft
-
 %.o: %.c
-	$(CC) $(CFLAGS) -I utils -I libft -c $< -o $@
+	$(CC) $(CFLAGS) -I utils -c $< -o $@
 
 # ── Limpieza ──────────────────────────────────
 clean:
-	$(MAKE) -C libft clean
 	$(RM) $(OBJ)
 
 fclean: clean
-	$(MAKE) -C libft fclean
 	$(RM) $(NAME)
 
 re: fclean all
