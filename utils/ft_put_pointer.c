@@ -6,7 +6,7 @@
 /*   By: gorkgall <gorkgall@42barcelona.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/22 17:12:17 by gorkgall          #+#    #+#             */
-/*   Updated: 2026/04/22 18:10:03 by gorkgall         ###   ########.fr       */
+/*   Updated: 2026/04/22 18:12:44 by gorkgall         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,13 +28,13 @@ size_t	ft_put_pointer(void *p)
 	uintptr_t	ptr;
 	size_t		res;
 
+	res = 0;
 	if (!p)
 	{
 		res += ft_putstr_fd("nil", 1);
 		return (res);
 	}
 	ptr = (uintptr_t)p;
-	res = 0;
 	res += ft_putstr_fd("0x", 1);
 	res += ft_put_hex_ptr(ptr, "0123456789abcdef");
 	return (res);
