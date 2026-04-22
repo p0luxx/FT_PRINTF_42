@@ -19,7 +19,7 @@ size_t	ft_putstr_fd(char *s, int fd)
 	res = 0;
 	if (!s)
 	{
-		res += write (fd, "null", 4);
+		res += write (fd, "(null)", 4);
 		return (res);
 	}
 	res += write (fd, s, ft_strlen(s));

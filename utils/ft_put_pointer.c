@@ -6,7 +6,7 @@
 /*   By: gorkgall <gorkgall@42barcelona.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/22 17:12:17 by gorkgall          #+#    #+#             */
-/*   Updated: 2026/04/22 18:12:44 by gorkgall         ###   ########.fr       */
+/*   Updated: 2026/04/22 18:15:11 by gorkgall         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ size_t	ft_put_pointer(void *p)
 	res = 0;
 	if (!p)
 	{
-		res += ft_putstr_fd("nil", 1);
+		res += ft_putstr_fd("(nil)", 1);
 		return (res);
 	}
 	ptr = (uintptr_t)p;
