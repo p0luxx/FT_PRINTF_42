@@ -1,24 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_put_hex.c                                       :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gorkgall <gorkgall@42barcelona.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/04/22 11:52:43 by gorkgall          #+#    #+#             */
-/*   Updated: 2026/04/22 13:21:05 by gorkgall         ###   ########.fr       */
+/*   Created: 2026/04/22 13:23:52 by gorkgall          #+#    #+#             */
+/*   Updated: 2026/04/22 13:24:06 by gorkgall         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../utils/ft_printf.h"
 
-size_t	ft_put_hex(unsigned int n, char *base)
+size_t	ft_strlen(const char *s)
 {
-	size_t	res;
+	size_t	size;
 
-	res = 0;
-	if (n >= 16)
-		res += ft_put_hex(n / 16, base);
-	res += ft_putchar_fd(base[n % 16], 1);
-	return (res);
+	size = 0;
+	while (s[size])
+		size++;
+	return (size);
 }
